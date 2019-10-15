@@ -12,18 +12,18 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextToSpeech toSpeech;
-    EditText editText;
-    Button bspeak,bstop;
-    String text;
-    int result;
+    private TextToSpeech toSpeech;
+    private EditText editText;
+    private Button bspeak,bstop;
+    private String text;
+    private int result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editText=(EditText) findViewById(R.id.editText);
-        bspeak=(Button)findViewById(R.id.bspeak);
-        bstop=(Button)findViewById(R.id.bstop);
+        editText=findViewById(R.id.editText);
+        bspeak=findViewById(R.id.bspeak);
+        bstop=findViewById(R.id.bstop);
 
         bspeak.setOnClickListener(this);
         bstop.setOnClickListener(this);
